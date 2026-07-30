@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abishek R V — AI Engineer, Full Stack Developer, and Founder of ABI. Building AI-powered applications, modern websites, and intelligent software that solve real-world problems.">
+    <meta name="keywords" content="Abishek R V, AI Engineer, Machine Learning, Full Stack Developer, Portfolio, ABI, Web Developer, Krishnagiri">
+    <meta name="author" content="Abishek R V">
+    <meta name="theme-color" content="#09090B">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abishek R V — AI Engineer & Full Stack Developer">
+    <meta property="og:description" content="Building AI-powered applications, modern websites, and intelligent software.">
+    <meta property="og:type" content="website">
+
+    <title>Abishek R V — AI Engineer & Full Stack Developer | Founder of ABI</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%237C3AED'/%3E%3Cstop offset='100%25' stop-color='%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='65' font-family='Arial' font-size='50' font-weight='bold' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        secondary: '#06B6D4',
+                        bg: '#09090B',
+                        card: '#18181B',
+                        muted: '#A1A1AA',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#09090B] text-white font-inter overflow-x-hidden">
+
+    <!-- Loading Screen -->
+    <div id="loader" class="fixed inset-0 z-[100] bg-[#09090B] flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <div class="loader-logo relative w-20 h-20 mx-auto mb-6">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary animate-pulse"></div>
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary animate-spin-slow" style="clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);"></div>
+                <span class="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold font-poppins">A</span>
+            </div>
+            <h2 class="text-xl font-poppins font-semibold gradient-text">Abishek R V</h2>
+            <div class="mt-4 w-48 h-1 bg-card rounded-full overflow-hidden mx-auto">
+                <div class="h-full bg-gradient-to-r from-primary to-secondary loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-primary to-secondary z-[60] transition-all duration-100" style="width: 0%;"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-2xl px-6 py-3 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg font-poppins transition-transform group-hover:scale-110">A</div>
+                    <span class="font-poppins font-semibold text-lg hidden sm:block">Abishek<span class="gradient-text">.RV</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105">
+                    Hire Me <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden max-w-7xl mx-auto px-4 sm:px-6 mt-2">
+            <div class="glass-card rounded-2xl p-6 space-y-2">
+                <a href="#home" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">Home</a>
+                <a href="#about" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">About</a>
+                <a href="#skills" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">Skills</a>
+                <a href="#projects" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">Projects</a>
+                <a href="#services" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">Services</a>
+                <a href="#contact" class="block px-4 py-3 rounded-xl hover:bg-white/10 transition">Contact</a>
+                <a href="#contact" class="block mt-3 px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-white text-center font-medium">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-blob"></div>
+            <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+            <!-- Grid pattern -->
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(124,58,237,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(124,58,237,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        </div>
+
+        <!-- Floating Tech Icons -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-[20%] left-[10%] text-primary/40 text-4xl animate-float"><i class="fa-brands fa-python"></i></div>
+            <div class="absolute top-[30%] right-[15%] text-secondary/40 text-4xl animate-float animation-delay-1000"><i class="fa-brands fa-js"></i></div>
+            <div class="absolute bottom-[30%] left-[20%] text-primary/40 text-3xl animate-float animation-delay-2000"><i class="fa-brands fa-react"></i></div>
+            <div class="absolute bottom-[20%] right-[10%] text-secondary/40 text-3xl animate-float animation-delay-3000"><i class="fa-solid fa-database"></i></div>
+            <div class="absolute top-[50%] left-[5%] text-purple-400/40 text-2xl animate-float animation-delay-1500"><i class="fa-solid fa-brain"></i></div>
+            <div class="absolute top-[15%] right-[30%] text-cyan-400/40 text-2xl animate-float animation-delay-2500"><i class="fa-brands fa-docker"></i></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-sm text-muted">Available for new projects</span>
+                    </div>
+
+                    <p class="text-lg text-muted mb-2 font-poppins">Hello, I'm</p>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold font-poppins mb-4 leading-tight">
+                        Abishek <span class="gradient-text">R V</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6">
+                        <span class="typewriter"></span>
+                    </h2>
+                    <p class="text-muted text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Building AI-powered applications, modern websites, automation solutions, and intelligent software that solve real-world problems.
+                    </p>
+
+                    <!-- Hero Buttons -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fa-solid fa-handshake"></i> Hire Me
+                        </a>
+                        <a href="#projects" class="btn-secondary">
+                            <i class="fa-solid fa-rocket"></i> View Projects
+                        </a>
+                        <a href="resume/Abishek_RV_Resume.pdf" download="Abishek_RV_Resume.pdf" class="btn-secondary">
+    <i class="fa-solid fa-download"></i> Resume
+</a>
+
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex justify-center lg:justify-start gap-4 mt-8">
+                        <a href="https://github.com/Abishek-R-V003" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abishek-r-v-java/" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://x.com/abishek_vadivel" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="mailto:abhishekvadivelrv@gamil.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right: Animated Profile -->
+                <div class="relative reveal animation-delay-500 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96">
+                        <!-- Glow Rings -->
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-3xl opacity-40 animate-pulse"></div>
+                        <div class="absolute -inset-4 rounded-full border-2 border-primary/30 animate-spin-slow"></div>
+                        <div class="absolute -inset-8 rounded-full border-2 border-secondary/20 animate-spin-reverse"></div>
+
+                        <!-- Profile Card -->
+                        <div class="absolute inset-4 rounded-full glass-card overflow-hidden flex items-center justify-center">
+                            <div class="w-full h-full bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/20 flex items-center justify-center relative">
+                                <!-- Code Editor Visual -->
+                                <div class="text-center px-6">
+                                    <div class="flex gap-2 justify-center mb-3">
+                                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                    </div>
+                                    <div class="text-left font-mono text-xs sm:text-sm space-y-1">
+                                        <p><span class="text-purple-400">const</span> <span class="text-cyan-400">dev</span> <span class="text-white">=</span> <span class="text-yellow-300">{</span></p>
+                                        <p class="pl-3"><span class="text-cyan-400">name</span><span class="text-white">:</span> <span class="text-green-400">'Abishek'</span><span class="text-white">,</span></p>
+                                        <p class="pl-3"><span class="text-cyan-400">role</span><span class="text-white">:</span> <span class="text-green-400">'AI Engineer'</span><span class="text-white">,</span></p>
+                                        <p class="pl-3"><span class="text-cyan-400">passion</span><span class="text-white">:</span> <span class="text-green-400">∞</span></p>
+                                        <p><span class="text-yellow-300">}</span><span class="text-white">;</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-4 -right-4 glass-card px-4 py-2 rounded-2xl animate-float">
+                            <span class="text-sm font-medium">🤖 AI Engineer</span>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-2xl animate-float animation-delay-2000">
+                            <span class="text-sm font-medium">💻 Full Stack</span>
+                        </div>
+                        <div class="absolute top-1/2 -right-8 glass-card px-4 py-2 rounded-2xl animate-float animation-delay-1000">
+                            <span class="text-sm font-medium">🚀 Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted">
+                <span class="text-xs">Scroll Down</span>
+                <div class="w-6 h-10 border-2 border-muted rounded-full flex justify-center pt-2">
+                    <div class="w-1 h-2 bg-primary rounded-full animate-scroll-down"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about" class="py-24 relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">About Me</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Passionate <span class="gradient-text">Developer</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Image/Code Visual -->
+                <div class="reveal">
+                    <div class="glass-card rounded-3xl overflow-hidden">
+                        <div class="bg-card/80 p-4 flex gap-2 border-b border-white/10">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <span class="text-xs text-muted ml-2 font-mono">~/about-me.txt</span>
+                        </div>
+                        <div class="p-6 sm:p-8 font-mono text-sm space-y-3">
+                            <p><span class="text-purple-400">class</span> <span class="text-yellow-300">Developer</span> <span class="text-white">{</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">name</span> <span class="text-white">=</span> <span class="text-green-400">"Abishek R V"</span><span class="text-white">;</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">role</span> <span class="text-white">=</span> <span class="text-green-400">"AI Engineer"</span><span class="text-white">;</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">company</span> <span class="text-white">=</span> <span class="text-green-400">"ABI"</span><span class="text-white">;</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">location</span> <span class="text-white">=</span> <span class="text-green-400">"Krishnagiri, TN"</span><span class="text-white">;</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">passion</span><span class="text-white">(</span><span class="text-white">)</span> <span class="text-white">{</span> <span class="text-orange-400">return</span> <span class="text-green-400">"Building the future"</span><span class="text-white">;</span> <span class="text-white">}</span></p>
+                            <p class="pl-4"><span class="text-cyan-400">interests</span> <span class="text-white">=</span> <span class="text-white">[</span></p>
+                            <p class="pl-8"><span class="text-green-400">"Problem Solving"</span><span class="text-white">,</span> <span class="text-green-400">"Java"</span><span class="text-white">,</span> <span class="text-green-400">"Python"</span><span class="text-white">,</span></p>
+                            <p class="pl-8"><span class="text-green-400">"AI Applications"</span><span class="text-white">,</span> <span class="text-green-400">"Web Dev"</span><span class="text-white">,</span></p>
+                            <p class="pl-8"><span class="text-green-400">"New Tech"</span></p>
+                            <p class="pl-4"><span class="text-white">];</span></p>
+                            <p><span class="text-white">}</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text -->
+                <div class="reveal animation-delay-300">
+                    <h3 class="text-2xl font-bold font-poppins mb-4">AI Engineer & <span class="gradient-text">Full Stack Developer</span></h3>
+                    <p class="text-muted leading-relaxed mb-4">
+                        I'm a passionate Artificial Intelligence & Machine Learning Engineering student with a deep love for building intelligent software solutions that solve real-world problems. As the Founder of <span class="text-primary font-semibold">ABI</span>, I help businesses and students bring their ideas to life through modern, scalable, and AI-powered applications.
+                    </p>
+                    <p class="text-muted leading-relaxed mb-6">
+                        My expertise spans across AI/ML, full-stack web development, and automation. I enjoy problem solving, Java & Python programming, building AI applications, creating modern web experiences, and continuously learning emerging technologies to stay ahead of the curve.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-secondary"></i>
+                            <span class="text-sm">AI & ML Expert</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-secondary"></i>
+                            <span class="text-sm">Full Stack Dev</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-secondary"></i>
+                            <span class="text-sm">Founder @ ABI</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-secondary"></i>
+                            <span class="text-sm">Freelancer</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary inline-flex">
+                        Let's Talk <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS SECTION ===================== -->
+    <section id="skills" class="py-24 relative">
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Technical Expertise</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">A comprehensive toolkit spanning programming, web development, AI/ML, and modern tools to deliver exceptional results.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming -->
+                <div class="skill-card reveal">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center">
+                            <i class="fa-solid fa-code text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">Programming</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item"><span class="text-muted">Java</span><div class="skill-bar"><div class="skill-fill" style="--w: 90%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Python</span><div class="skill-bar"><div class="skill-fill" style="--w: 92%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">C</span><div class="skill-bar"><div class="skill-fill" style="--w: 75%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">SQL</span><div class="skill-bar"><div class="skill-fill" style="--w: 80%"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card reveal animation-delay-200">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-cyan-500 flex items-center justify-center">
+                            <i class="fa-solid fa-globe text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">Web Development</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item"><span class="text-muted">HTML5</span><div class="skill-bar"><div class="skill-fill" style="--w: 95%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">CSS3</span><div class="skill-bar"><div class="skill-fill" style="--w: 92%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" style="--w: 90%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Bootstrap</span><div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Django</span><div class="skill-bar"><div class="skill-fill" style="--w: 82%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">REST API</span><div class="skill-bar"><div class="skill-fill" style="--w: 88%"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="skill-card reveal animation-delay-400">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-primary flex items-center justify-center">
+                            <i class="fa-solid fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">AI & Machine Learning</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item"><span class="text-muted">Machine Learning</span><div class="skill-bar"><div class="skill-fill" style="--w: 88%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">NLP</span><div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Computer Vision</span><div class="skill-bar"><div class="skill-fill" style="--w: 82%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Data Analysis</span><div class="skill-bar"><div class="skill-fill" style="--w: 87%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">Prompt Engineering</span><div class="skill-bar"><div class="skill-fill" style="--w: 90%"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-card reveal animation-delay-600">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-secondary flex items-center justify-center">
+                            <i class="fa-solid fa-database text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">Database</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item"><span class="text-muted">MySQL</span><div class="skill-bar"><div class="skill-fill" style="--w: 88%"></div></div></div>
+                        <div class="skill-item"><span class="text-muted">SQLite</span><div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card reveal animation-delay-800">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+                            <i class="fa-solid fa-wrench text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">Tools & Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="tech-pill"><i class="fa-brands fa-git-alt text-orange-500"></i> Git</span>
+                        <span class="tech-pill"><i class="fa-brands fa-github text-white"></i> GitHub</span>
+                        <span class="tech-pill"><i class="fa-solid fa-code text-blue-400"></i> VS Code</span>
+                        <span class="tech-pill"><i class="fa-brands fa-docker text-cyan-400"></i> Docker</span>
+                        <span class="tech-pill"><i class="fa-solid fa-paper-plane text-orange-400"></i> Postman</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-card reveal animation-delay-1000">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                            <i class="fa-solid fa-lightbulb text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-poppins">Soft Skills</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Problem Solving</div>
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Quick Learner</div>
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Team Collaboration</div>
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Communication</div>
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Time Management</div>
+                        <div class="flex items-center gap-2 text-muted"><i class="fa-solid fa-check text-secondary text-xs"></i> Adaptability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE SECTION ===================== -->
+    <section id="experience" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Experience</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">My <span class="gradient-text">Journey</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Founder Experience -->
+                <div class="reveal">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 hover:border-primary/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-rocket text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-poppins">Founder</h3>
+                                    <p class="text-primary font-medium">ABI — Your Tech Partner</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium w-fit">Current</span>
+                        </div>
+                        <p class="text-muted mb-4">Leading ABI as a freelance development studio, delivering AI solutions, websites, automation tools, and custom software to clients worldwide.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill">AI Solutions</span>
+                            <span class="tech-pill">Web Development</span>
+                            <span class="tech-pill">Automation</span>
+                            <span class="tech-pill">Custom Software</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Developer -->
+                <div class="reveal animation-delay-200">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 hover:border-secondary/50 transition-all">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-laptop-code text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold font-poppins">Freelance Developer</h3>
+                                    <p class="text-secondary font-medium">Self-Employed</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-secondary/20 text-secondary text-sm font-medium w-fit">Ongoing</span>
+                        </div>
+                        <p class="text-muted mb-4">Building websites, student projects, portfolio sites, business websites, APIs, and custom software solutions for diverse clients.</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> AI Solutions</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Web Dev</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Automation</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Student Projects</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Portfolios</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Business Sites</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> APIs</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Custom Software</div>
+                            <div class="flex items-center gap-2 text-sm text-muted"><i class="fa-solid fa-check text-secondary"></i> Maintenance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS SECTION ===================== -->
+    <section id="projects" class="py-24 relative">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Portfolio</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">A showcase of my recent work — combining AI, modern web technologies, and clean design to create impactful solutions.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Project 1: Student Management System -->
+                <div class="project-card reveal">
+                    <div class="relative h-56 bg-gradient-to-br from-primary to-purple-600 overflow-hidden rounded-t-3xl flex items-center justify-center">
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+                        <i class="fa-solid fa-graduation-cap text-7xl text-white/80"></i>
+                        <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-medium">Featured</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-poppins mb-2">Student Management System</h3>
+                        <p class="text-muted text-sm mb-4">Complete dashboard for managing student records, attendance, and reports with role-based authentication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill">Django</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">SQLite</span>
+                            <span class="tech-pill">Dashboard</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-muted mb-4">
+                            <div><i class="fa-solid fa-check text-secondary"></i> Dashboard</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Attendance</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Records</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Reports</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Authentication</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Modern UI</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="btn-sm flex-1 justify-center"><i class="fa-solid fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-sm-outline flex-1 justify-center"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: EdgeDrive AI -->
+                <div class="project-card reveal animation-delay-200">
+                    <div class="relative h-56 bg-gradient-to-br from-secondary to-blue-600 overflow-hidden rounded-t-3xl flex items-center justify-center">
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+                        <i class="fa-solid fa-car text-7xl text-white/80"></i>
+                        <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-medium">AI</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-poppins mb-2">EdgeDrive AI</h3>
+                        <p class="text-muted text-sm mb-4">Real-time driver monitoring and predictive vehicle safety system using Artificial Intelligence.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill">AI</span>
+                            <span class="tech-pill">Computer Vision</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">ML</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-muted mb-4">
+                            <div><i class="fa-solid fa-check text-secondary"></i> Driver Monitoring</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> AI Prediction</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Computer Vision</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Vehicle Safety</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Analytics</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Real-time</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="btn-sm flex-1 justify-center"><i class="fa-solid fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-sm-outline flex-1 justify-center"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Movie Recommendation -->
+                <div class="project-card reveal animation-delay-400">
+                    <div class="relative h-56 bg-gradient-to-br from-pink-500 to-red-600 overflow-hidden rounded-t-3xl flex items-center justify-center">
+                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+                        <i class="fa-solid fa-film text-7xl text-white/80"></i>
+                        <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-medium">ML</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-poppins mb-2">Movie Recommendation System</h3>
+                        <p class="text-muted text-sm mb-4">Intelligent recommendation engine using machine learning to deliver personalized movie suggestions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Flask</span>
+                            <span class="tech-pill">ML</span>
+                            <span class="tech-pill">Pandas</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-muted mb-4">
+                            <div><i class="fa-solid fa-check text-secondary"></i> Recommendation</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Search Engine</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Personalized</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Smart Filter</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> User Profiles</div>
+                            <div><i class="fa-solid fa-check text-secondary"></i> Fast Results</div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="btn-sm flex-1 justify-center"><i class="fa-solid fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-sm-outline flex-1 justify-center"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION SECTION ===================== -->
+    <section id="education" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Education</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Academic <span class="gradient-text">Background</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto reveal">
+                <div class="glass-card rounded-3xl p-8 sm:p-10 relative overflow-hidden">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl"></div>
+                    <div class="relative flex flex-col md:flex-row gap-6 items-start md:items-center">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-secondary text-sm font-medium mb-2">2021 — 2025</p>
+                            <h3 class="text-2xl font-bold font-poppins mb-2">Bachelor of Engineering</h3>
+                            <p class="text-primary font-semibold mb-3">Artificial Intelligence & Machine Learning</p>
+                            <p class="text-muted leading-relaxed">Pursuing a comprehensive degree in AI & ML engineering, gaining deep expertise in machine learning algorithms, deep learning, computer vision, NLP, and software engineering principles.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="tech-pill">Machine Learning</span>
+                                <span class="tech-pill">Deep Learning</span>
+                                <span class="tech-pill">Data Science</span>
+                                <span class="tech-pill">Software Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVICES SECTION ===================== -->
+    <section id="services" class="py-24 relative">
+        <div class="absolute top-1/3 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Services</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">What I <span class="gradient-text">Offer</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">Professional services tailored to meet your business needs — from AI integration to full-stack development.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <div class="service-card reveal">
+                    <i class="fa-solid fa-robot service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">AI Application Development</h3>
+                    <p class="text-muted text-sm">Intelligent AI solutions powered by machine learning, NLP, and computer vision.</p>
+                </div>
+                <div class="service-card reveal animation-delay-100">
+                    <i class="fa-solid fa-layer-group service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Full Stack Development</h3>
+                    <p class="text-muted text-sm">End-to-end web applications with modern frontend and robust backend.</p>
+                </div>
+                <div class="service-card reveal animation-delay-200">
+                    <i class="fa-solid fa-user-tie service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Portfolio Websites</h3>
+                    <p class="text-muted text-sm">Stunning personal portfolios that showcase your brand beautifully.</p>
+                </div>
+                <div class="service-card reveal animation-delay-300">
+                    <i class="fa-solid fa-building service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Business Websites</h3>
+                    <p class="text-muted text-sm">Professional sites that convert visitors into customers.</p>
+                </div>
+                <div class="service-card reveal animation-delay-400">
+                    <i class="fa-solid fa-cart-shopping service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">E-Commerce Websites</h3>
+                    <p class="text-muted text-sm">Scalable online stores with seamless shopping experience.</p>
+                </div>
+                <div class="service-card reveal animation-delay-500">
+                    <i class="fa-solid fa-gears service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Automation</h3>
+                    <p class="text-muted text-sm">Smart automation solutions to streamline your workflows.</p>
+                </div>
+                <div class="service-card reveal animation-delay-600">
+                    <i class="fa-solid fa-plug service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">API Development</h3>
+                    <p class="text-muted text-sm">RESTful APIs built for performance and easy integration.</p>
+                </div>
+                <div class="service-card reveal animation-delay-700">
+                    <i class="fa-solid fa-chart-line service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">ML Projects</h3>
+                    <p class="text-muted text-sm">Custom machine learning projects for real-world challenges.</p>
+                </div>
+                <div class="service-card reveal animation-delay-800">
+                    <i class="fa-solid fa-user-graduate service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Student Projects</h3>
+                    <p class="text-muted text-sm">Academic and final-year project development support.</p>
+                </div>
+                <div class="service-card reveal animation-delay-900">
+                    <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+                    <h3 class="text-lg font-bold font-poppins mb-2">Website Maintenance</h3>
+                    <p class="text-muted text-sm">Ongoing support, updates, and performance optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== WHY HIRE ME SECTION ===================== -->
+    <section id="why-hire" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Why Choose Me</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Why <span class="gradient-text">Hire Me?</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="why-card reveal">
+                    <i class="fa-solid fa-code why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Clean Code</h3>
+                    <p class="text-muted text-sm">Well-structured, documented, maintainable code following best practices.</p>
+                </div>
+                <div class="why-card reveal animation-delay-100">
+                    <i class="fa-solid fa-palette why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Modern UI/UX</h3>
+                    <p class="text-muted text-sm">Beautiful, intuitive interfaces designed for the best user experience.</p>
+                </div>
+                <div class="why-card reveal animation-delay-200">
+                    <i class="fa-solid fa-bolt why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Fast Delivery</h3>
+                    <p class="text-muted text-sm">Efficient workflows to deliver your project on time, every time.</p>
+                </div>
+                <div class="why-card reveal animation-delay-300">
+                    <i class="fa-solid fa-mobile-screen why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Responsive Design</h3>
+                    <p class="text-muted text-sm">Pixel-perfect across all devices — desktop, tablet, and mobile.</p>
+                </div>
+                <div class="why-card reveal animation-delay-400">
+                    <i class="fa-solid fa-microchip why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">AI Integration</h3>
+                    <p class="text-muted text-sm">Cutting-edge AI features to make your product smarter.</p>
+                </div>
+                <div class="why-card reveal animation-delay-500">
+                    <i class="fa-solid fa-server why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Scalable Architecture</h3>
+                    <p class="text-muted text-sm">Built to grow with your business — robust and future-proof.</p>
+                </div>
+                <div class="why-card reveal animation-delay-600">
+                    <i class="fa-solid fa-heart why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Client Satisfaction</h3>
+                    <p class="text-muted text-sm">Your success is my priority — revisions until you're happy.</p>
+                </div>
+                <div class="why-card reveal animation-delay-700">
+                    <i class="fa-solid fa-comments why-icon"></i>
+                    <h3 class="font-bold font-poppins text-lg mb-2">Pro Communication</h3>
+                    <p class="text-muted text-sm">Clear, consistent communication throughout the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== STATISTICS SECTION ===================== -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-72 h-72 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute bottom-0 right-0 w-72 h-72 bg-secondary/20 rounded-full blur-3xl -z-10"></div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center reveal">
+                        <div class="text-4xl sm:text-5xl font-bold font-poppins gradient-text counter" data-target="25">0</div>
+                        <div class="text-muted mt-2 text-sm sm:text-base">Projects Completed</div>
+                    </div>
+                    <div class="text-center reveal animation-delay-200">
+                        <div class="text-4xl sm:text-5xl font-bold font-poppins gradient-text counter" data-target="15">0</div>
+                        <div class="text-muted mt-2 text-sm sm:text-base">Technologies Used</div>
+                    </div>
+                    <div class="text-center reveal animation-delay-400">
+                        <div class="text-4xl sm:text-5xl font-bold font-poppins gradient-text counter" data-target="18">0</div>
+                        <div class="text-muted mt-2 text-sm sm:text-base">Happy Clients</div>
+                    </div>
+                    <div class="text-center reveal animation-delay-600">
+                        <div class="text-4xl sm:text-5xl font-bold font-poppins gradient-text"><span class="counter" data-target="5000">0</span>+</div>
+                        <div class="text-muted mt-2 text-sm sm:text-base">Learning Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS SECTION ===================== -->
+    <section id="testimonials" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Testimonials</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Client <span class="gradient-text">Reviews</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">What clients and collaborators say about working with me.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="testimonial-card reveal">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted mb-6 italic">"Abishek built an incredible AI-powered dashboard for our startup. His technical expertise and communication made the entire process seamless."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-bold">AK</div>
+                        <div>
+                            <h4 class="font-semibold">Arun Kumar</h4>
+                            <p class="text-muted text-sm">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal animation-delay-200">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted mb-6 italic">"The portfolio website Abishek designed exceeded all my expectations. Modern, fast, and beautifully crafted. Highly recommended!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-cyan-500 flex items-center justify-center font-bold">PS</div>
+                        <div>
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-muted text-sm">Designer & Creator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal animation-delay-400">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-muted mb-6 italic">"Delivered our final-year AI project on time with outstanding quality. Abishek is patient, knowledgeable, and truly passionate about his work."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center font-bold">RV</div>
+                        <div>
+                            <h4 class="font-semibold">Rahul Verma</h4>
+                            <p class="text-muted text-sm">Engineering Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GITHUB SECTION ===================== -->
+    <section id="github" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">GitHub</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Code <span class="gradient-text">Activity</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">My open source contributions and featured repositories.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Profile Card -->
+                <div class="glass-card rounded-3xl p-6 reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold">A</div>
+                        <div>
+                            <h3 class="font-bold font-poppins">Abishek R V</h3>
+                            <p class="text-muted text-sm">@abishek-rv</p>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm mb-4">AI Engineer • Full Stack Developer • Founder of ABI</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span class="text-muted">Followers</span><span class="font-semibold">120+</span></div>
+                        <div class="flex justify-between"><span class="text-muted">Following</span><span class="font-semibold">85</span></div>
+                        <div class="flex justify-between"><span class="text-muted">Public Repos</span><span class="font-semibold">25+</span></div>
+                        <div class="flex justify-between"><span class="text-muted">Stars</span><span class="font-semibold">200+</span></div>
+                    </div>
+                    <a href="#" class="btn-secondary w-full justify-center mt-6">
+                        <i class="fa-brands fa-github"></i> View GitHub Profile
+                    </a>
+                </div>
+
+                <!-- Contribution Graph Placeholder -->
+                <div class="glass-card rounded-3xl p-6 reveal animation-delay-200">
+                    <h3 class="font-bold font-poppins mb-4">Contribution Graph</h3>
+                    <div class="grid grid-cols-12 gap-1.5 mb-4">
+                        <!-- 84 squares for a contribution-style graph -->
+                        <!-- Generated placeholder -->
+                        <span class="contrib-cell opacity-20"></span><span class="contrib-cell opacity-40"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-30"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-40"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-70"></span>
+                        <span class="contrib-cell opacity-30"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-40"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-50"></span>
+                        <span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-40"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-50"></span>
+                        <span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-80"></span>
+                        <span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span>
+                        <span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-50"></span>
+                        <span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-100"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-50"></span><span class="contrib-cell opacity-80"></span><span class="contrib-cell opacity-90"></span><span class="contrib-cell opacity-60"></span><span class="contrib-cell opacity-70"></span><span class="contrib-cell opacity-90"></span>
+                    </div>
+                    <p class="text-muted text-sm">420+ contributions in the last year</p>
+                </div>
+
+                <!-- Featured Repos -->
+                <div class="glass-card rounded-3xl p-6 reveal animation-delay-400">
+                    <h3 class="font-bold font-poppins mb-4">Featured Repositories</h3>
+                    <div class="space-y-3">
+                        <a href="#" class="repo-item">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium flex items-center gap-2"><i class="fa-solid fa-book-bookmark text-primary"></i> edgedrive-ai</span>
+                                <span class="text-xs text-muted flex items-center gap-1"><i class="fa-solid fa-star text-yellow-400"></i> 45</span>
+                            </div>
+                            <p class="text-xs text-muted mt-1">Real-time driver monitoring AI</p>
+                        </a>
+                        <a href="#" class="repo-item">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium flex items-center gap-2"><i class="fa-solid fa-book-bookmark text-secondary"></i> student-mgmt-django</span>
+                                <span class="text-xs text-muted flex items-center gap-1"><i class="fa-solid fa-star text-yellow-400"></i> 32</span>
+                            </div>
+                            <p class="text-xs text-muted mt-1">Full-featured Django management system</p>
+                        </a>
+                        <a href="#" class="repo-item">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium flex items-center gap-2"><i class="fa-solid fa-book-bookmark text-pink-400"></i> movie-recommender</span>
+                                <span class="text-xs text-muted flex items-center gap-1"><i class="fa-solid fa-star text-yellow-400"></i> 28</span>
+                            </div>
+                            <p class="text-xs text-muted mt-1">ML-based movie recommendation system</p>
+                        </a>
+                        <a href="#" class="repo-item">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium flex items-center gap-2"><i class="fa-solid fa-book-bookmark text-green-400"></i> portfolio-template</span>
+                                <span class="text-xs text-muted flex items-center gap-1"><i class="fa-solid fa-star text-yellow-400"></i> 51</span>
+                            </div>
+                            <p class="text-xs text-muted mt-1">Modern portfolio website template</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact" class="py-24 relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-secondary font-medium mb-2 uppercase tracking-wider text-sm">Get In Touch</p>
+                <h2 class="text-4xl sm:text-5xl font-bold font-poppins mb-4">Let's <span class="gradient-text">Connect</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-4"></div>
+                <p class="text-muted max-w-2xl mx-auto">Have a project in mind or want to collaborate? Drop me a message and let's create something amazing together.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <!-- Contact Info -->
+                <div class="lg:col-span-2 space-y-4 reveal">
+                    <div class="glass-card rounded-2xl p-6 hover:border-primary/50 transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold font-poppins mb-1">Email</h4>
+                                <a href="mailto:abhishekvadivelrv@gamil.com" class="text-muted text-sm hover:text-secondary transition">abhishekvadivelrv@gamil.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 hover:border-secondary/50 transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold font-poppins mb-1">Phone</h4>
+                                <a href="tel:9840889119" class="text-muted text-sm hover:text-secondary transition">+91 98408 89119</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 hover:border-primary/50 transition-all">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold font-poppins mb-1">Location</h4>
+                                <p class="text-muted text-sm">Krishnagiri, Tamil Nadu, India — 635121</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6">
+                        <h4 class="font-semibold font-poppins mb-4">Follow Me</h4>
+                        <div class="flex gap-3">
+                            <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-3 reveal animation-delay-200">
+                    <form id="contactForm" class="glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm mb-2 font-medium">Full Name *</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="form-input">
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-2 font-medium">Email Address *</label>
+                                <input type="email" name="email" required placeholder="you@example.com" class="form-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 font-medium">Subject *</label>
+                            <input type="text" name="subject" required placeholder="Project Inquiry" class="form-input">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 font-medium">Service Required</label>
+                            <select name="service" class="form-input">
+                                <option value="">Select a service</option>
+                                <option>AI Application Development</option>
+                                <option>Full Stack Web Development</option>
+                                <option>Portfolio Website</option>
+                                <option>Business Website</option>
+                                <option>E-Commerce Website</option>
+                                <option>Automation</option>
+                                <option>API Development</option>
+                                <option>ML Project</option>
+                                <option>Student Project</option>
+                                <option>Website Maintenance</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 font-medium">Your Message *</label>
+                            <textarea name="message" required rows="5" placeholder="Tell me about your project..." class="form-input resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full justify-center">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <p id="formMessage" class="text-sm text-center mt-3 hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-white/10 pt-16 pb-8 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg">A</div>
+                        <span class="font-poppins font-semibold text-xl">Abishek<span class="gradient-text">.RV</span></span>
+                    </div>
+                    <p class="text-muted mb-6 max-w-md leading-relaxed">AI Engineer & Full Stack Developer building intelligent software solutions. Founder of ABI — your trusted tech partner.</p>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Abishek-R-V003" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abishek-r-v-java/" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://x.com/abishek_vadivel" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/abishek_vadivel" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold font-poppins mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-muted hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="text-muted hover:text-secondary transition">About</a></li>
+                        <li><a href="#skills" class="text-muted hover:text-secondary transition">Skills</a></li>
+                        <li><a href="#projects" class="text-muted hover:text-secondary transition">Projects</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">Services</a></li>
+                        <li><a href="#contact" class="text-muted hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold font-poppins mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">AI Development</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">Web Development</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">Automation</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">API Development</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">ML Projects</a></li>
+                        <li><a href="#services" class="text-muted hover:text-secondary transition">Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-muted text-sm text-center md:text-left">
+                    © <span id="year"></span> <span class="gradient-text font-semibold">Abishek R V</span>. All rights reserved.
+                </p>
+                <p class="text-muted text-sm flex items-center gap-2">
+                    Designed & Developed with <i class="fa-solid fa-heart text-red-500 animate-pulse"></i> by 
+                    <span class="gradient-text font-semibold">Abishek R V</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/50 flex items-center justify-center z-40 opacity-0 pointer-events-none transition-all hover:scale-110" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
